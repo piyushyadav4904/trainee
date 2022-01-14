@@ -1,0 +1,109 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.circle{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+
+}
+.circle1{
+  width: 200px;
+  height: 200px;
+  background-color: darkseagreen;
+  border-radius: 50%;
+  position: absolute;
+
+}
+.circle2{
+  width: 300px;
+  height: 300px;
+  background-color: burlywood;
+  border-radius: 50%;
+  position: absolute;
+
+}
+
+/*
+.circle::after{
+  content: '';
+  background-color: yellow;
+  width: 200px;
+  height: 200px;
+  position:absolute;
+  z-index: -1;
+  border-radius:50%;
+  top: -50px;
+  left:-50px;
+
+}
+
+.circle::before{
+  content: '';
+  background-color: pink;
+  width: 300px;
+  height: 300px;
+  position:absolute;
+  z-index: -1;
+  border-radius:50%;
+  top: -100px;
+  left:-100px;
+*/
+
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: violet;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.circle.popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.circle.show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
